@@ -20,10 +20,11 @@ public class JobController {
         if (jobList.isEmpty()) {
             System.out.println("No Jobs in List");
         } else {
-            System.out.println("All Jobs");
-            for(Job job: jobList) {
-                System.out.println(job.toString());
-            }
+            System.out.println("Your current jobs : ");
+//            for(Job job: jobList) {
+//                System.out.println(job);
+//            }
+            System.out.println(jobList);
         }
     }
     public void deleteJobById(int jobId) {
@@ -32,10 +33,10 @@ public class JobController {
             Job job = iterator.next();
             if (job.getJobId() == jobId) {
                 iterator.remove();
-                System.out.println("Job" +jobId+"Deleted");
+                System.out.println("Job " +jobId+" Deleted");
                 return;
             }
         }
-        System.out.println("Job ID" +jobId+ "Not found");
+        System.out.println("Job ID " +jobId+ " Not found");
     }
 }

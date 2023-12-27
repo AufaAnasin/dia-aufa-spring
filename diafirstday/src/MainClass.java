@@ -1,5 +1,3 @@
-import java.util.ArrayList;
-import java.util.List;
 import java.util.Scanner;
 
 public class MainClass {
@@ -18,18 +16,20 @@ public class MainClass {
             if (inputCommand == 1) {
                 System.out.println("Please input new job using following format : [job_id], [job_address], [job_position_id], [job_position_name]");
                 //for multiline input
-                String jobInput = scanner.nextLine();
-                // make the inputted value in the array
+                Scanner scannerline = new Scanner(System.in);
+                String jobInput = scannerline.nextLine();
+//                 make the inputted value in the array
                 String[] jobDetails = jobInput.split(",");
-
-                    System.out.println("Test");
-                    Position position = new Position(Integer.parseInt(jobDetails[2]), jobDetails[3]);
-                    Job job = new Job(Integer.parseInt(jobDetails[0]), jobDetails[1], position);
-                    jobController.addJob(job);
+                Position position = new Position(Integer.parseInt(jobDetails[2]), jobDetails[3]);
+                Job job = new Job(Integer.parseInt(jobDetails[0]), jobDetails[1], position);
+                jobController.addJob(job);
             } else if (inputCommand == 2) {
                 jobController.printAllJobs();
             } else if (inputCommand == 3) {
-                System.out.println("This is option 3");
+                System.out.println("Please input job id to delete :");
+                Scanner scannerdelete = new Scanner(System.in);
+                int deleteInput = scannerdelete.nextInt();
+                jobController.deleteJobById(deleteInput);
             } else {
                 break;
             }

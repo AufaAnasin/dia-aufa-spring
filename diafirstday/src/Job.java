@@ -26,8 +26,10 @@ public class Job {
     public void setJobPosition(Position jobPosition) {
         this.jobPosition = jobPosition;
     }
-
-
+    @Override
+    public String toString() {
+        return "Job ID: " + jobId + ", Job Address: " + jobAddress + jobPosition;
+    }
 
     public Job(int jobId, String jobAddress, Position jobPosition) {
         this.jobId = jobId;

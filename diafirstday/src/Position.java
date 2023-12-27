@@ -19,6 +19,11 @@ public class Position {
         return PosName;
     }
 
+    @Override
+    public String toString() {
+        return "Position ID: " + PosId + ", Position Name: " + PosName;
+    }
+
     public void setPosName(String posName) {
         PosName = posName;
     }
