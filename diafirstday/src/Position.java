@@ -1,30 +1,30 @@
 public class Position {
-    private int PosId;
-    private String PosName;
+    private int posId;
+    private String posName;
 
-    public Position(int PosId, String PosName) {
-        this.PosId = PosId;
-        this.PosName = PosName;
+    public Position(int posId, String posName) {
+        this.posId = posId;
+        this.posName = posName;
     }
 
     public int getPosId() {
-        return PosId;
+        return posId;
     }
 
     public void setPosId(int posId) {
-        PosId = posId;
+        posId = posId;
     }
 
     public String getPosName() {
-        return PosName;
+        return posName;
     }
 
     @Override
     public String toString() {
-        return "Position ID: " + PosId + ", Position Name: " + PosName;
+        return " Position ID: " + posId + ", Position Name: " + posName;
     }
 
     public void setPosName(String posName) {
-        PosName = posName;
+        posName = posName;
     }
 }

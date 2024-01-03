@@ -22,7 +22,7 @@ public class JobController {
         } else {
             System.out.println("Your current jobs : ");
 //            for(Job job: jobList) {
-//                System.out.println(job);
+//                System.out.println(jobList);
 //            }
             System.out.println(jobList);
         }
